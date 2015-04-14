@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="plugin" version="3.0" group="system" method="upgrade">
+	<name>System - CNTools - Holmes CSS markup detective</name>
+	<author>CN-Tools | Clemens Neubauer</author>
+	<creationDate>2015-04-14</creationDate>
+	<copyright>Copyright 2014 (C) Clemens Neubauer. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>cn-tools@gmx.at</authorEmail>
+	<authorUrl>https://github.com/cn-tools/</authorUrl>
+	<version>0.0.1</version>
+	<description>CSS markup detective useing holmes by https://github.com/redroot/holmes</description>
+
+	<files>
+		<filename plugin="plg_cntools_holmes">plg_cntools_holmes.php</filename>
+		<filename plugin="plg_cntools_holmes">holmes.css</filename>
+		<filename plugin="plg_cntools_holmes">index.html</filename>
+	</files>
+
+	<updateservers>
+		<server type="extension" priority="1" name="plg_cntools_holmes Updates">https://raw.githubusercontent.com/cn-tools/plg_cntools_holmes/master/updateversion.xml</server>
+	</updateservers>
+
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="mode" type="radio" default="1" class="btn-group btn-group-yesno" label="Debug mode only">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>
