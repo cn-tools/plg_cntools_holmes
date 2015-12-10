@@ -30,7 +30,7 @@ class plgSystemPlg_CNTools_Holmes extends JPlugin {
 		if ((JDEBUG) or ($this->params->get('mode', '1') == '0'))
 		{
 			$document = JFactory::getDocument();
-			$document->addCustomTag('<link rel="stylesheet" href="' . JPATH_ROOT . '/plugins/system/plg_cntools_holmes/holmes.css" type="text/css" media="screen" />');
+			$document->addStyleSheet(JURI::base() . 'plugins/system/plg_cntools_holmes/' . $this->params->get('file', 'holmes.min.css'));
 			$lScript = 'jQuery(document).ready(function(){jQuery("body").addClass("holmes-debug");});';
 			$document->addScriptDeclaration($lScript, 'text/javascript');
 		}
